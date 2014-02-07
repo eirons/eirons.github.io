@@ -1,0 +1,13 @@
+
+        body {
+            font: 18px/30px helvetica, sans-serif;
+            
+        }
+        .container {
+          width: 500px;
+          margin: 0 auto; 
+        }
+        #profile {
+          float: left;
+          margin-right: 10px;
+        }
