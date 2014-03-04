@@ -8,7 +8,13 @@
         body {
             font: 18px/30px helvetica, sans-serif;
         }
-
+        span {
+          /*color: pink;*/
+          background-color: #FFD6FC;
+        }
+        body { 
+          background-color: #ffffff; 
+          }
         </style>
     </head>
     <body>
@@ -16,7 +22,7 @@
 
 <li>In a mixing bowl, combine the <span id="noun-5">______</span>, <span id="noun-6">______</span> and <span id="noun-7">______</span>.</li>
 
-<li>In a saucepan, melt the <span id="noun-6">______</span>. Add the cocoa. <span id="verb-1">______</span> together. Add the boiling water, allow the mixture to boil for 30 seconds and then turn off the heat. Pour over the flour mixture and stir lightly to cool.</li>
+<li>In a saucepan, melt the <span id="noun-8">______</span>. Add the cocoa. <span id="verb-1">______</span> together. Add the boiling water, allow the mixture to boil for 30 seconds and then turn off the heat. Pour over the flour mixture and stir lightly to cool.</li>
 
 <li>Combine the buttermilk, baking soda, vanilla and beaten eggs. Stir the buttermilk mixture into the butter/chocolate mixture.</li>
 
@@ -32,6 +38,30 @@
 </ol>
 Read more at: http://www.foodnetwork.com/recipes/ree-drummond/big-chocolate-birthday-cake-recipe.html?oc=linkback</p>
          <script>
+         var placeholders = [
+          'noun-1',
+          'noun-2',
+          'number-1',
+          'noun-3',
+          'noun-4',
+          'noun-5',
+          'verb-1',
+          'noun-7',
+          'verb-2',
+          'verb-3',
+          'verb-4',
+          'noun-8',
+          'verb-5',
+         ];
+         for (var i = 0; i < placeholders.length; i++) {
+            var id = placeholders[i];
+            var span = document.getElementById(id);
+            var word = prompt('Please enter a ' + id.substring(0,id.length-2));
+            span.innerHTML = word;
+         }
+         
+             /*
+             
              document.getElementById('noun-1').innerHTML = prompt ('Enter a noun');
              document.getElementById('noun-2').innerHTML = prompt ('Enter a noun');
              document.getElementById('number-1').innerHTML = prompt ('Enter a number');
@@ -46,6 +76,8 @@ Read more at: http://www.foodnetwork.com/recipes/ree-drummond/big-chocolate-birt
              document.getElementById('verb-4').innerHTML = prompt ('Enter a noun');
              document.getElementById('noun-8').innerHTML = prompt ('Enter a noun');
              document.getElementById('verb-5').innerHTML = prompt ('Enter a noun');
+             
+             */
          </script>
     </body>
 </html>
